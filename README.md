@@ -9,4 +9,7 @@ Xindex for Learned index with delta tree
 <b>3.如果出现rdma设备不能用的情况，记得以sudo的方式执行程序    </b> <br><br>
 <b>4. 如果在node22上运行请将此处代码的port替换为1，可以利用ibstatus查看,node22是port1为active</b>
 https://github.com/LBY2000/XIndex-DM/blob/83cc09c9a693689aea243fd69bdd7f95317e84a1/Sherman/include/Rdma.h#L60
+
+<b>5. 如果利用dsm->barrier(s)来同步集群内的其他节点的时候，记得修改restartMemc.sh，添加一行echo来删除这个barrier，不然的话会有问题</b>
+
 <b>待补充与待开发.....</b>
